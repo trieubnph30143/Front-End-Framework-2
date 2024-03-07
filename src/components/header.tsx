@@ -1,11 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-const Header = ()=> {
+type Props = {
+    title:string;
+}
+
+const Header = (props: Props) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container">
       <a className="navbar-brand" href="#">
-        Navbar
+        { props.title }
       </a>
       <button
         className="navbar-toggler"
@@ -35,7 +39,6 @@ const Header = ()=> {
       </div>
     </div>
   </nav>
-  );
+  )
 }
-
 export default Header;
