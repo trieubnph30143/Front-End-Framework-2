@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/header';
@@ -6,7 +6,8 @@ import Slider from './components/slider';
 import Productlist from './components/productlist';
 import Footer from './components/footer';
 import IProduct from './interface/product';
-function App() {
+import Templatedemo from './components/demo';
+function App() {  
   const title:string = "Xin chào";
   const products:IProduct[]=[
     {
@@ -34,12 +35,17 @@ function App() {
       "price":10000
     }
   ]
+  const [count,Setcount] = useState(1)
+  const handleUp=()=>{
+    console.log(count); //1
+    const b = count+1;  
+    Setcount(b);
+    console.log(count);
+    
+  }
   return (
     <>
-      <Header title= {title}/>
-      <Slider/>
-      <Productlist products={products}/>
-      <Footer/>
+      <Templatedemo/>
     </>
   );
 }
