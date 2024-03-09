@@ -45,7 +45,10 @@ function App() {
   }
   return (
     <>
-      <Templatedemo/>
+      <Header title='LOGO'/>
+      <Slider/>
+      <Productlist/>
+      <Footer/>
     </>
   );
 }
