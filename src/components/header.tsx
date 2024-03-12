@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom';
 
 type Props = {
     title:string;
@@ -25,15 +26,13 @@ const Header = (props: Props) => {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">
-              Home
-            </a>
+            <NavLink to={'/'}>Home</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link">Features</a>
+          <NavLink to={'/details'}>Details</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link">Pricing</a>
+            <NavLink to={'/demo'}>Demo</NavLink>
           </li>
         </ul>
       </div>

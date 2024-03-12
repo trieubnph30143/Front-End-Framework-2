@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import IProduct from "../interface/product";
 import Addtocart from "./addtocart";
+import { Link } from "react-router-dom";
 
 type Props = {
 };
@@ -34,7 +35,7 @@ const buttonClickprev =()=>{
         return (
           <div className="col-12 col-sm-4 col-md3">
             <img src={product.thumbnail}/>
-            <h3>{product.title}</h3>
+            <h3><Link to={'/details/'+product.id}>{product.title}</Link></h3>
             <span>{product.price}</span>
             <p><Addtocart pid={product.id}/></p>
           </div>
