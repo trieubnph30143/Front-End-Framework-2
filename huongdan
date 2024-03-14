@@ -1,2 +1,8 @@
 Cài đặt create-react-app: npm i -g create-react-app
 - Khởi tạo dự án:npx create-react-app ten-da --template typescript
+
+- Tạo route:
+Cài đặt: npm i react-router-dom
+
+<Link>
+<NavLink>
