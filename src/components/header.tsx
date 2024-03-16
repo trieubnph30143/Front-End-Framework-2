@@ -7,7 +7,7 @@ type Props = {
 }
 
 const Header = (props: Props) => {
-  const [count,setCount] = useContext(CountCT) as any
+  const [state,setState] = useContext(CountCT) as any
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container">
@@ -37,8 +37,10 @@ const Header = (props: Props) => {
             <NavLink to={'/demo'}>Demo</NavLink>
           </li>
         </ul>
+        <button type="button" onClick={()=>{setState({type:'login'})}}>Login</button>
+        <button type="button" onClick={()=>{setState({type:'register'})}}>Register</button>
+        <button type="button" onClick={()=>{setState({type:'reset'})}}>Reset</button>
       </div>
-      <div>Số đếm: {count}</div>
     </div>
   </nav>
   )
