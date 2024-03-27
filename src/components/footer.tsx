@@ -1,17 +1,15 @@
-import React, { useContext } from 'react'
-import { CountCT } from '../layout/client'
+import React, { useContext } from "react";
+import { CountCT } from "../layout/client";
 
-type Props = {}
+type Props = {};
 
 const Footer = (props: Props) => {
-  const [state,setCount] = useContext(CountCT) as any
+  const [state, setState] = useContext(CountCT) as any;
   return (
     <>
-    {state}
-    <div className="p-3 mb-2 bg-warning text-dark text-center">
-       
-    </div>
+      {state}
+      <div className="p-3 mb-2 bg-warning text-dark text-center"></div>
     </>
-  )
-}
+  );
+};
 export default Footer;
